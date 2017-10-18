@@ -1,0 +1,22 @@
+{
+    "name": "stwiebe/tons-of-data",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefan Wiebe",
+            "email": "m@stwiebe.de",
+            "role": "Developer"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"TonsOfDataAPI\\": "src/TonsOfDataAPI.php"
+		}
+	},
+    "require": {
+        "php-http/guzzle6-adapter": "^1.1",
+        "dolejska-daniel/riot-api": "^1.0",
+        "stwiebe/chggapi": "^1.0"
+    }
+}
