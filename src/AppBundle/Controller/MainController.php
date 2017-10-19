@@ -32,7 +32,13 @@ class MainController extends Controller {
 	  * @Route("/")
 	  */
 	public function startPage() {
-		$champions = $this->api->getStaticChampions(null, null, null, "all");
+		$champions = $this->api->getStaticChampions(null, null, null, "all")
+					 ->data;
+
+		usort($champions, function ($a, $b) {
+			return $a->name <=> $b->name;
+		});
+
 
 		return $this->render("overview.twig", array(
 			"champions" => $champions

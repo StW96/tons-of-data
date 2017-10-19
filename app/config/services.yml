@@ -33,3 +33,6 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    AppBundle\Twig\DataDragonExtension\:
+        resource: '../../src/AppBundle/Twig/DataDragonExtension.php'
+        tags: ['twig.extension']

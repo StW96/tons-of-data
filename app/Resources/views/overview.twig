@@ -1,5 +1,5 @@
 Overview
 
 {% for name, champion in champions %}
-	{{ champion.name }}<br>
+	{{ champion.key | championIcon | raw }}<br>
 {% endfor %}
