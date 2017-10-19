@@ -1715,7 +1715,7 @@ class RiotAPI
 	 * @return Objects\MatchDto
 	 * @link https://developer.riotgames.com/api-methods/#match-v3/GET_getMatch
 	 */
-	public function getMatch( $match_id, int $for_account_id = null ): Objects\MatchDto
+	public function getMatch( int $match_id, int $for_account_id = null ): Objects\MatchDto
 	{
 		$this->setEndpoint("/lol/match/" . self::RESOURCE_MATCH_V3 . "/matches/{$match_id}")
 			->setResource(self::RESOURCE_MATCH, "/matches/%i")
@@ -1775,7 +1775,7 @@ class RiotAPI
 	 * @return Objects\MatchlistDto
 	 * @link https://developer.riotgames.com/api-methods/#match-v3/GET_getMatchlist
 	 */
-	public function getMatchlistByAccount( int $account_id, $queue = null, $season = null, $champion = null, $beginTime = null, $endTime = null, int $beginIndex = null, int $endIndex = null ): Objects\MatchlistDto
+	public function getMatchlistByAccount( int $account_id, $queue = null, $season = null, $champion = null, int $beginTime = null, int $endTime = null, int $beginIndex = null, int $endIndex = null ): Objects\MatchlistDto
 	{
 		$this->setEndpoint("/lol/match/" . self::RESOURCE_MATCH_V3 . "/matchlists/by-account/{$account_id}")
 			->setResource(self::RESOURCE_MATCH, "/matchlists/by-account/%i")
